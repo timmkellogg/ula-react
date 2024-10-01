@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>React Barebones</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> 
+    </head>
+    <body>
+        
+        <h1>React Barebones</h1>
+
+        <div id="app"></div>
+
+        <script>
+            //Select DOM element to render on
+            const domContainer = document.querySelector('#app')
+
+            // Create root on selected DOM element
+            const root = ReactDOM.createRoot(domContainer)
+
+            // Create a component that will be nested inside another component
+            const ChildComponent = React.createElement('h2', {'test-prop': 'propValue'}, 'REACT RENDERED THIS TEXT!')
+
+            // // Create the parent component
+            // const ParentComponent = React.createElement('div', {}, ChildComponent)
+
+
+
+            // // Render component at root
+            root.render(ChildComponent)
+
+        </script>
+    </body>
+</html>
